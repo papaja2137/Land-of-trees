@@ -1,0 +1,1 @@
+zrób stronę o grze "Bóbr magik" opisz postacie i zrób te postacie potrzebny będzie HTML CSS JS główny bohater to Bóbr Magic

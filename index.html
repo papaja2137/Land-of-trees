@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bóbr Magik - Gra Przygodowa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bóbr Magik</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Strona główna</a></li>
+                <li><a href="#characters">Postacie</a></li>
+                <li><a href="#weapons">Bronie</a></li>
+                <li><a href="#items">Magiczne Przedmioty</a></li>
+                <li><a href="#fruits">Magiczne Owoce</a></li>
+                <li><a href="#about">O grze</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h2>Witaj w świecie magii!</h2>
+            <p>Poznaj niezwykłą historię Bobra Magika i jego przyjaciół</p>
+        </section>
+
+        <section id="game" class="game-section">
+            <h2>Zagraj w Grę!</h2>
+            <div class="game-container">
+                <div class="game-stats">
+                    <span>Punkty: <span id="score">0</span></span>
+                    <span>Poziom: <span id="level">1</span></span>
+                </div>
+                <canvas id="gameCanvas"></canvas>
+                <div class="game-controls">
+                    <button id="startGame" class="start-button">Rozpocznij Grę</button>
+                    <div class="game-instructions">
+                        <p>Sterowanie:</p>
+                        <ul>
+                            <li>← → Ruch w lewo/prawo</li>
+                            <li>Spacja - Skok</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="characters" class="characters">
+            <h2>Postacie</h2>
+            <div class="character-grid">
+                <div class="character-card" id="bobr-magik">
+                    <img src="images/bebr1m.jpg" alt="Bóbr Magik">
+                    <h3>Bóbr Magik</h3>
+                    <p>Główny bohater gry, młody bóbr obdarzony niezwykłymi zdolnościami magicznymi. 
+                    Uczy się kontrolować swoją magię i odkrywa tajemnice magicznego świata.</p>
+                </div>
+                <div class="character-card" id="wrona-mistrz">
+                    <img src="images/wrona-mistrz.png" alt="Wrona Mistrz">
+                    <h3>Wrona Mistrz</h3>
+                    <p>Mistrzyni magii i nauczycielka Bobra Magika. 
+                    Pomaga mu rozwijać jego magiczne umiejętności i uczy go o historii magicznego świata.</p>
+                </div>
+                <div class="character-card" id="lis-przyjaciel">
+                    <img src="images/lis-przyjaciel.png" alt="Lis Przyjaciel">
+                    <h3>Lis Przyjaciel</h3>
+                    <p>Najlepszy przyjaciel Bobra Magika. 
+                    Pomaga mu w przygodach i zawsze jest gotowy do wspólnych wyzwań.</p>
+                </div>
+                <div class="character-card" id="sowa-madra">
+                    <img src="images/sowa-madra.png" alt="Sowa Mądra">
+                    <h3>Sowa Mądra</h3>
+                    <p>Bibliotekarka i strażniczka starożytnych zwojów magicznych.
+                    Posiada ogromną wiedzę o zaklęciach i historii magicznego świata.</p>
+                </div>
+                <div class="character-card" id="niedzwiedz-straznik">
+                    <img src="images/niedzwiedz-straznik.png" alt="Niedźwiedź Strażnik">
+                    <h3>Niedźwiedź Strażnik</h3>
+                    <p>Potężny obrońca Magicznego Lasu.
+                    Używa swojej siły i magii ziemi do ochrony mieszkańców.</p>
+                </div>
+                <div class="character-card" id="wilk-cien">
+                    <img src="images/wilk-cien.png" alt="Wilk Cień">
+                    <h3>Wilk Cień</h3>
+                    <p>Tajemniczy mieszkaniec mrocznej części lasu.
+                    Początkowo wrogi, później staje się sojusznikiem Bobra Magika.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="weapons" class="weapons">
+            <h2>Magiczne Bronie</h2>
+            <div class="item-grid">
+                <div class="item-card">
+                    <img src="images/magiczna-laska.png" alt="Magiczna Laska">
+                    <h3>Magiczna Laska Drzewna</h3>
+                    <p>Podstawowa broń Bobra Magika, wykonana z magicznego drewna.
+                    Wzmacnia zdolności magiczne i pozwala kontrolować żywioł wody.</p>
+                </div>
+                <div class="item-card">
+                    <img src="images/miecz-swiatla.png" alt="Miecz Światła">
+                    <h3>Miecz Światła</h3>
+                    <p>Starożytna broń przekazywana przez strażników lasu.
+                    Emanuje świętą energią i odpędza złe moce.</p>
+                </div>
+                <div class="item-card">
+                    <img src="images/luk-wiatru.png" alt="Łuk Wiatru">
+                    <h3>Łuk Wiatru</h3>
+                    <p>Magiczny łuk pozwalający strzelać strzałami z czystej energii.
+                    Strzały mogą przenikać przez przeszkody.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="items" class="items">
+            <h2>Magiczne Przedmioty</h2>
+            <div class="item-grid">
+                <div class="item-card">
+                    <img src="images/amulet-mocy.png" alt="Amulet Mocy">
+                    <h3>Amulet Mocy</h3>
+                    <p>Starożytny artefakt zwiększający siłę magii.
+                    Świeci jasnym blaskiem w obecności niebezpieczeństwa.</p>
+                </div>
+                <div class="item-card">
+                    <img src="images/ksiega-zaklec.png" alt="Księga Zaklęć">
+                    <h3>Księga Zaklęć</h3>
+                    <p>Zawiera starożytne zaklęcia i wiedzę o magii.
+                    Z każdą stroną odkrywa nowe tajemnice.</p>
+                </div>
+                <div class="item-card">
+                    <img src="images/magiczna-mapa.png" alt="Magiczna Mapa">
+                    <h3>Magiczna Mapa</h3>
+                    <p>Pokazuje ukryte ścieżki i magiczne miejsca.
+                    Reaguje na obecność magicznych przedmiotów.</p>
+                </div>
+                <div class="item-card">
+                    <img src="images/krysztaly-mocy.png" alt="Kryształy Mocy">
+                    <h3>Kryształy Mocy</h3>
+                    <p>Zbierane podczas przygód kryształy.
+                    Służą do ulepszania magicznych przedmiotów.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="fruits" class="fruits">
+            <h2>Magiczne Owoce</h2>
+            <div class="item-grid">
+                <div class="item-card">
+                    <img src="images/owoc-sily.png" alt="Owoc Siły">
+                    <h3>Owoc Siły</h3>
+                    <p>Czerwony, błyszczący owoc dający nadludzką siłę.
+                    Pozwala niszczyć przeszkody i odpychać wrogów.</p>
+                </div>
+                <div class="item-card">
+                    <img src="images/owoc-lewitacji.png" alt="Owoc Lewitacji">
+                    <h3>Owoc Lewitacji</h3>
+                    <p>Fioletowy, unoszący się owoc.
+                    Pozwala latać przez krótki czas.</p>
+                </div>
+                <div class="item-card">
+                    <img src="images/owoc-szybkosci.png" alt="Owoc Szybkości">
+                    <h3>Owoc Szybkości</h3>
+                    <p>Żółty, połyskujący owoc.
+                    Zwiększa prędkość poruszania się.</p>
+                </div>
+                <div class="item-card">
+                    <img src="images/owoc-niewidzialnosci.png" alt="Owoc Niewidzialności">
+                    <h3>Owoc Niewidzialności</h3>
+                    <p>Przezroczysty, migoczący owoc.
+                    Czyni niewidzialnym dla wrogów.</p>
+                </div>
+                <div class="item-card">
+                    <img src="images/owoc-ognia.png" alt="Owoc Ognia">
+                    <h3>Owoc Ognia</h3>
+                    <p>Płonący, czerwono-pomarańczowy owoc.
+                    Pozwala strzelać kulami ognia.</p>
+                </div>
+                <div class="item-card">
+                    <img src="images/owoc-lodu.png" alt="Owoc Lodu">
+                    <h3>Owoc Lodu</h3>
+                    <p>Błękitny, oszroniony owoc.
+                    Zamraża przeciwników i tworzy lodowe platformy.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>O grze</h2>
+            <p>Bóbr Magik to fascynująca gra przygodowa, w której wcielasz się w młodego bobra obdarzonego magicznymi zdolnościami. 
+            Wraz z przyjaciółmi musisz stawić czoła różnym wyzwaniom, odkrywać tajemnice magicznego świata i rozwijać swoje umiejętności.
+            Zbieraj magiczne przedmioty, ucz się nowych zaklęć i poznawaj fascynujących mieszkańców Magicznego Lasu!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bóbr Magik - Wszelkie prawa zastrzeżone</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
